@@ -6,10 +6,10 @@ source ./deploy/moodle-on-gcp/0-infra/envs.sh
 echo "Opening file..."
 sleep 5s
 
-vim /deploy/moodle-on-gcp/5-helm/moodle-values.yaml
+vim ./deploy/moodle-on-gcp/5-helm/moodle-values.yaml
 
 echo "Deploying Moodle..."
-/deploy/moodle-on-gcp/5-helm/moodle-helm-install.sh
+./deploy/moodle-on-gcp/5-helm/moodle-helm-install.sh
 
 
 echo "Press CTRL+C to exit..."

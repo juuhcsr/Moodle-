@@ -60,10 +60,10 @@ $(ColorBlue 'Escolha uma opção:') "
 			11) ./Deploy/11-deploy-pv.sh ; menu ;;
 			12) ./Deploy/12-deploy-pvc.sh ; menu ;;
 			13) ./Deploy/13-deploy-moodle-helm.sh ; menu ;;
-			14) ./Deploy/14-deploy-backend ; menu ;;
-			15) ./Deploy/15-deploy-ssl-redirect.sh ; menu ;;
-			16) ./Deploy/16-deploy-cloud-lb.sh ; menu ;;
-			17) ./Deploy/17-deploy_hpa.sh ; menu ;;
+			14) ./Deploy/14-deploy-backend.sh ; menu ;;
+			15) ./Deploy/15-deploy-cloud-lb.sh ; menu ;;
+			16) ./Deploy/16-deploy-ssl-redirect.sh ; menu ;;
+			17) ./Deploy/17-deploy-hpa.sh ; menu ;;
 			18) ./Deploy/18-redis.sh ; menu ;;
 			#19) ./Deploy/ ; menu ;;
 			20) ./Deploy/hurry_up.sh ; menu ;;
