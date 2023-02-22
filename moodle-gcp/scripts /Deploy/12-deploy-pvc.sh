@@ -8,7 +8,7 @@ gcloud container clusters get-credentials $GKE_NAME \
     --region $REGION \
     --project $PROJECT_ID
     
-kubectl apply -f /deploy/moodle-on-gcp/3-pvc/pvc-filestore.yaml    
+kubectl apply -f ./deploy/moodle-on-gcp/3-pvc/pvc-filestore.yaml    
 
 echo "Press CTRL+C to exit..."
 echo "<a href='https://github.com/google/moodle-on-gcp/blob/main/docs/deploying-persistent-volume-claim.md'>Documentation</a>"

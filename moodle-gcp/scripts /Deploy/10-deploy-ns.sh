@@ -8,7 +8,7 @@ gcloud container clusters get-credentials $GKE_NAME \
     --region $REGION \
     --project $PROJECT_ID
     
-kubectl apply -f /deploy/moodle-on-gcp/2-namespace/namespace-moodle.yaml    
+kubectl apply -f ./deploy/moodle-on-gcp/2-namespace/namespace-moodle.yaml    
 
 echo "Press CTRL+C to exit..."
 echo "<a href='https://github.com/google/moodle-on-gcp/blob/main/docs/deploying-namespace.md'>Documentation</a>"
