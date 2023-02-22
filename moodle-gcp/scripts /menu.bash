@@ -42,6 +42,7 @@ $(ColorGreen '16)') Implantar Ingress - Balanceador de carga em nuvem.
 $(ColorGreen '17)') Habilitar escala horizontal para Pods.
 $(ColorGreen '18)') Configurar Redis.
 $(ColorGreen '20)') Estou com pressa (faz tudo de uma vez, garanta que as variáveis foram preenchidas)
+$(ColorGreen '21)') Verificar instalação
 $(ColorGreen '0)') Sair
 $(ColorBlue 'Escolha uma opção:') "
 
@@ -67,6 +68,7 @@ $(ColorBlue 'Escolha uma opção:') "
 			18) ./Deploy/18-redis.sh ; menu ;;
 			#19) ./Deploy/ ; menu ;;
 			20) ./Deploy/hurry_up.sh ; menu ;;
+			21) ./Deploy/teste.sh ; menu ;;
 		0) exit 0 ;;
 		*) echo -e $red"Wrong option."$clear; WrongCommand;;
         esac
