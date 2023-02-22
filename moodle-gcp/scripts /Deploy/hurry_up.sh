@@ -1,0 +1,16 @@
+./Deploy/2-initial.sh
+./Deploy/3-network.sh
+./Deploy/4-deploy-server.sh 
+./Deploy/5-permissions.sh 
+./Deploy/6-gke-kubernets.sh 
+./Deploy/7-cloud-sql.sh 
+./Deploy/8-filestore-nfs.sh 
+./Deploy/9-artifact-registry.sh 
+./Deploy/10-deploy-ns.sh 
+./Deploy/11-deploy-pv.sh 
+./Deploy/12-deploy-pvc.sh 
+./Deploy/13-deploy-moodle-helm.sh 
+./Deploy/14-deploy-backend 
+./Deploy/15-deploy-ssl-redirect.sh 
+./Deploy/16-deploy-cloud-lb.sh
+./Deploy/17-deploy_hpa.sh 
