@@ -1,7 +1,7 @@
 #########################################################
 # PERMISSOES
 #########################################################
-source /deploy/moodle-on-gcp/0-infra/envs.sh
+source ./deploy/moodle-on-gcp/0-infra/envs.sh
 
 echo "Grants minimal roles to the cluster service account"
   gcloud projects add-iam-policy-binding $PROJECT_ID \

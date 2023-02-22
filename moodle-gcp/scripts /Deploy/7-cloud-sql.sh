@@ -1,7 +1,7 @@
 #########################################################
 # CLOUD SQL - MYSQL MANAGED
 #########################################################
-source /deploy/moodle-on-gcp/0-infra/envs.sh
+source ./deploy/moodle-on-gcp/0-infra/envs.sh
 
 echo "Creates a Cloud SQL instance (managed)."
 gcloud sql instances create $MYSQL_INSTANCE_NAME \

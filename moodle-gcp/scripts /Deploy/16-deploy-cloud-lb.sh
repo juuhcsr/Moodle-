@@ -1,7 +1,7 @@
 #########################################################
 # Deploying Ingress - Cloud Load Balancer
 #########################################################
-source /deploy/moodle-on-gcp/0-infra/envs.sh
+source ./deploy/moodle-on-gcp/0-infra/envs.sh
 
 echo "Connect to GKE cluster via command line and update local cluster credentials."
 gcloud container clusters get-credentials $GKE_NAME \

@@ -1,7 +1,7 @@
 #########################################################
 # INITIAL SETUP
 #########################################################
-source /deploy/moodle-on-gcp/0-infra/envs.sh
+source ./deploy/moodle-on-gcp/0-infra/envs.sh
 
 gcloud config set project $PROJECT_ID
 gcloud services enable \

@@ -1,7 +1,7 @@
 #########################################################
 # Artifact Registry and Moodle Image
 #########################################################
-source /deploy/moodle-on-gcp/0-infra/envs.sh
+source ./deploy/moodle-on-gcp/0-infra/envs.sh
 
 echo "Creates an Artifact Registry repo for building Moodle images"
 gcloud artifacts repositories create moodle-filestore \

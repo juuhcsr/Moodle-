@@ -1,7 +1,7 @@
 #########################################################
 # GKE - KUBERNETS
 #########################################################
-source /deploy/moodle-on-gcp/0-infra/envs.sh
+source ./deploy/moodle-on-gcp/0-infra/envs.sh
 
 echo "Creates GKE with necessary add-ons."
 gcloud container clusters create $GKE_NAME \
@@ -37,5 +37,8 @@ gcloud container clusters create $GKE_NAME \
   --master-authorized-networks $MASTER_AUTHORIZED_NETWORKS \
   --region=$REGION
   
-  
+gcloud container clusters get-credentials $GKE_NAME \
+  --region $REGION \
+  --project $PROJECT_ID
 
+gcloud compute --project=gcp-moodle firewall-rules create moodle-allow-tcp --direction=INGRESS --priority=997 --network=moodle-network --action=ALLOW --rules=tcp:22 --source-ranges=0.0.0.0/0

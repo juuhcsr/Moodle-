@@ -1,7 +1,7 @@
 #########################################################
 # NETWORK
 #########################################################
-source /deploy/moodle-on-gcp/0-infra/envs.sh 
+source ./deploy/moodle-on-gcp/0-infra/envs.sh 
 
 
 echo "Creation of global IP address to be later attached to Cloud Load Balancer."

@@ -1,7 +1,7 @@
 #########################################################
 # FILESTORE - NFS 2.5Tb
 #########################################################
-source /deploy/moodle-on-gcp/0-infra/envs.sh
+source ./deploy/moodle-on-gcp/0-infra/envs.sh
 
 echo "Creates a Filestore service for NFS support."
 

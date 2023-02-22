@@ -1,7 +1,7 @@
 #########################################################
 # Deploying Moodle With Helm
 #########################################################
-source /deploy/moodle-on-gcp/0-infra/envs.sh
+source ./deploy/moodle-on-gcp/0-infra/envs.sh
 
 echo "Opening file..."
 sleep 5s

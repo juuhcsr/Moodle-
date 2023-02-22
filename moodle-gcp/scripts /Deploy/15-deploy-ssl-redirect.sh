@@ -1,7 +1,7 @@
 #########################################################
 # Provisioning a new certificate managed by Google Cloud
 #########################################################
-source /deploy/moodle-on-gcp/0-infra/envs.sh
+source ./deploy/moodle-on-gcp/0-infra/envs.sh
 
 lb_ip = `gcloud compute addresses describe moodle-ingress-ip \
 >     --format="get(address)" \
