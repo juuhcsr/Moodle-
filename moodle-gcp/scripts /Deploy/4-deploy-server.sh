@@ -21,7 +21,7 @@ gcloud compute instances create deploy-1  \
   apt install -y git
 
   # a editar !!!!
-  git clone https://github.com/google/moodle-on-gcp.git ./deploy/moodle-on-gcp
+  git clone https://github.com/juuhcsr/Moodle- ./deploy/moodle-on-gcp
 
   curl https://baltocdn.com/helm/signing.asc | gpg --dearmor | sudo tee /usr/share/keyrings/helm.gpg > /dev/null
   apt-get install apt-transport-https --yes
