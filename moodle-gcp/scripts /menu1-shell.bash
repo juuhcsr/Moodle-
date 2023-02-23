@@ -37,8 +37,8 @@ $(ColorGreen '11)') Implantar PV.
 $(ColorGreen '12)') Implantar PVC.
 $(ColorGreen '13)') Implantar Moodle com Helm.
 $(ColorGreen '14)') Implantar configuração de backend.
-$(ColorGreen '15)') Prover um novo certificado gerenciado pelo Google Cloud.
-$(ColorGreen '16)') Implantar Ingress - Balanceador de carga em nuvem.
+$(ColorGreen '15)') Implantar Ingress - Balanceador de carga em nuvem.
+$(ColorGreen '16)') Prover um novo certificado gerenciado pelo Google Cloud.
 $(ColorGreen '17)') Habilitar escala horizontal para Pods.
 $(ColorGreen '18)') Configurar Redis.
 $(ColorGreen '20)') Estou com pressa (faz tudo de uma vez, garanta que as variáveis foram preenchidas)

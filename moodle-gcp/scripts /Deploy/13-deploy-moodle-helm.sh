@@ -2,15 +2,22 @@
 # Deploying Moodle With Helm
 #########################################################
 source ./deploy/moodle-on-gcp/0-infra/envs.sh
-echo "----------------------------------------"
+echo "-----------------------------------------------------"
 echo "Preencha o arquivo dos valores do moodle"
-echo "----------------------------------------"
-sleep 5s
+echo "Algumas variáveis para copiar :"
+echo "Registry = $REGION-docker.pkg.dev"
+echo "Repository = $PROJECT_ID/moodle-filestore/moodle" 
+echo "database-password: $MYSQL_ROOT_PASSWORD"
+echo "database: $MYSQL_DB"                                        
+echo "-----------------------------------------------------"
+sleep 10s
 
 nano ./deploy/moodle-on-gcp/5-helm/moodle-values.yaml
 
 echo "Implantando o Moodle..."
-./deploy/moodle-on-gcp/5-helm/moodle-helm-install.sh
+cd ./deploy/moodle-on-gcp/5-helm
+./moodle-helm-install.sh
+#./deploy/moodle-on-gcp/5-helm/moodle-helm-install.sh
 
 
 echo "Press CTRL+C to exit..."

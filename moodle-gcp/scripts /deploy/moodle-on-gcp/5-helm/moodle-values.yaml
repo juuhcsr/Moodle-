@@ -54,13 +54,13 @@ moodleSiteName: "Moodle 4.0.1 on GKE" # some site name if you wish to do so.
 ## User of the application
 ## ref: https://github.com/bitnami/bitnami-docker-moodle#configuration
 ##
-moodleUsername: "<YOUR-MOODLE-ADMIN-USERNAME>"
+moodleUsername: "Admin"
 
 ## Application password
 ## Defaults to a random 10-character alphanumeric string if not set
 ## ref: https://github.com/bitnami/bitnami-docker-moodle#configuration
 ##
-moodlePassword: "<YOUR-MOODLE-ADMIN-PASSWORD>"
+moodlePassword: "Admin"
 
 ## Admin email
 ## ref: https://github.com/bitnami/bitnami-docker-moodle#configuration
