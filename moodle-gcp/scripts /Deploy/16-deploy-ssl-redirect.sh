@@ -36,7 +36,7 @@ spec:
 EOF
 kubectl apply -f ./deploy/moodle-on-gcp/-ssl-certificate-and-redirect/frontendconfig-redirect-http-to-https.yaml
 kubectl apply -f ./deploy/moodle-on-gcp/-ssl-certificate-and-redirect/google-managed-ssl-certificate.yaml
-echo "Press CTRL+C to exit..."
+echo "Pressione CTRL+C para sair..."
 echo "Just go to the end when you should be able to see your certificate properly running with status ACTIVE."
 echo "<a href='https://github.com/google/moodle-on-gcp/blob/main/docs/provisioning-certificate-forcing-https.md'>Documentation</a>"
 kubectl get managedcertificate -n moodle -w

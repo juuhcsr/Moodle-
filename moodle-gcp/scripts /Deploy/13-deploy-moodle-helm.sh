@@ -20,7 +20,7 @@ cd ./deploy/moodle-on-gcp/5-helm
 #./deploy/moodle-on-gcp/5-helm/moodle-helm-install.sh
 
 
-echo "Press CTRL+C to exit..."
+echo "Pressione CTRL+C para sair..."
 echo "Just go to the end when you should be able to see your pods properly running,"
 echo "<a href='https://github.com/google/moodle-on-gcp/blob/main/docs/install-moodle-helm.md'>Documentation</a>"
 kubectl get pod -n moodle -w

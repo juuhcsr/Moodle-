@@ -9,7 +9,7 @@ source ./deploy/moodle-on-gcp/0-infra/envs.sh
 #  --repository-format=docker
  
 
-echo "Creating cloudbuild.yaml file"
+echo "Criando o arquivo cloud build"
 
 mv ./deploy/moodle-on-gcp/4-moodle-image-builder/cloudbuild.yaml ./deploy/moodle-on-gcp/4-moodle-image-builder/cloudbuild_bkp.yaml
 
@@ -27,8 +27,8 @@ EOF
 
 cat ./deploy/moodle-on-gcp/4-moodle-image-builder/cloudbuild.yaml
 
-cd ./deploy/moodle-on-gcp/4-moodle-image-builder/
+echo "executando o arquivo"
 
-sleep 5s
+cd ./deploy/moodle-on-gcp/4-moodle-image-builder/
 
 gcloud builds submit --region $REGIO

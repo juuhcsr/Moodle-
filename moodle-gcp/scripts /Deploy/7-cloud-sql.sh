@@ -3,7 +3,7 @@
 #########################################################
 source ./deploy/moodle-on-gcp/0-infra/envs.sh
 
-echo "Creates a Cloud SQL instance (managed)."
+echo "Criando a instância gerenciada sql."
 gcloud sql instances create $MYSQL_INSTANCE_NAME \
   --database-version=MYSQL_8_0 \
   --cpu 1 \
@@ -26,7 +26,7 @@ gcloud sql instances create $MYSQL_INSTANCE_NAME \
   --root-password=$MYSQL_ROOT_PASSWORD
   
   
-  echo "Creates Moodle's database with proper charset."
+  echo "Criando o database do moodle."
   
   gcloud sql databases create $MYSQL_DB \
   --instance $MYSQL_INSTANCE_NAME \

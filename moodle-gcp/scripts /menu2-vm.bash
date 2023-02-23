@@ -23,17 +23,17 @@ echo "# Menu de instlação do moodle   Máquina virtual   -     #"
 echo "#########################################################"
 echo -ne "
 Menu do moodle no gcp escolha a opção 
-$(ColorGreen '10)') Implantar NameSpace NS.
-$(ColorGreen '11)') Implantar PV.
-$(ColorGreen '12)') Implantar PVC.
-$(ColorGreen '13)') Implantar Moodle com Helm.
-$(ColorGreen '14)') Implantar configuração de backend.
-$(ColorGreen '15)') Implantar Ingress - Balanceador de carga em nuvem.
-$(ColorGreen '16)') Prover um novo certificado gerenciado pelo Google Cloud.
-$(ColorGreen '17)') Habilitar escala horizontal para Pods.
-$(ColorGreen '18)') Configurar Redis.
-$(ColorGreen '20)') Estou com pressa (faz tudo de uma vez, garanta que as variáveis foram preenchidas)
-$(ColorGreen '21)') Verificar instalação
+$(ColorGreen '1)') Implantar NameSpace NS.
+$(ColorGreen '2)') Implantar PV.
+$(ColorGreen '3)') Implantar PVC.
+$(ColorGreen '4)') Implantar Moodle com Helm.
+$(ColorGreen '5)') Implantar configuração de backend.
+$(ColorGreen '6)') Implantar Ingress - Balanceador de carga em nuvem.
+$(ColorGreen '7)') Prover um novo certificado gerenciado pelo Google Cloud.
+$(ColorGreen '8)') Habilitar escala horizontal para Pods.
+$(ColorGreen '9)') Configurar Redis.
+$(ColorGreen '10)') Estou com pressa (faz tudo de uma vez, garanta que as variáveis foram preenchidas)
+$(ColorGreen '11)') Verificar instalação
 $(ColorGreen '0)') Sair
 $(ColorBlue 'Escolha uma opção:') "
 

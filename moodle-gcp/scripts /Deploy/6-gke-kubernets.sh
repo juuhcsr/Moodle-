@@ -3,7 +3,7 @@
 #########################################################
 source ./deploy/moodle-on-gcp/0-infra/envs.sh
 
-echo "Creates GKE with necessary add-ons."
+echo "Criando o cluster kubernetes."
 gcloud container clusters create $GKE_NAME \
   --release-channel=stable \
   --region=$REGION \
@@ -31,7 +31,7 @@ gcloud container clusters create $GKE_NAME \
   --services-secondary-range-name=svc-range-gke-1
   
   
-  echo "Authorizes the cluster to be reached by some VM in the VPC (this will be needed later for cluster configuration)."
+  echo "Autoriza o cluster a conectar nas instâncias."
   gcloud container clusters update $GKE_NAME \
   --enable-master-authorized-networks \
   --master-authorized-networks $MASTER_AUTHORIZED_NETWORKS \

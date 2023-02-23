@@ -4,14 +4,14 @@
 source ./deploy/moodle-on-gcp/0-infra/envs.sh 
 
 
-echo "Creation of global IP address to be later attached to Cloud Load Balancer."
+echo "criando o ip do load balance."
 gcloud compute addresses create moodle-ingress-ip --global
 
-echo "Enables networking services creation (if not enabled already)"
+echo "Habilitando criação de serviços (se não estiver habilitado)."
 gcloud services enable servicenetworking.googleapis.com \
   &nbsp;--project=$PROJECT_ID
 
-echo "Creates a new Virtual Private Network (VPC) and a subnet to host Moodle's resources."
+echo "Criando nova VPC."
 
 gcloud compute networks create $VPC_NAME \
   --subnet-mode=custom \
@@ -25,17 +25,17 @@ gcloud compute networks create $VPC_NAME \
   --network=$VPC_NAME \
   --region=$REGION
 
-echo "Create secondary ranges for the subnetwork to add to Google Kubernetes Engine (GKE)."
+echo "Criando uma rede secundária pro gke."
 gcloud compute networks subnets update $SUBNET_NAME \
   --region $REGION \
   --add-secondary-ranges pod-range-gke-1=$GKE_POD_RANGE;
  
-echo  "Authorizes the cluster to be reached by some VM in the VPC (this will be needed later for cluster configuration)."
+echo  "Habilitando conexão do kubernetes."
  gcloud compute networks subnets update $SUBNET_NAME \
   --region $REGION \
   --add-secondary-ranges svc-range-gke-1=$GKE_SVC_RANGE;
   
- echo "Creates a router and NAT config for enabling cluster's outbound communication."
+ echo "Configurando Nat e Cloud router."
  gcloud compute routers create $NAT_ROUTER \
     --project=$PROJECT_ID \
     --network=$VPC_NAME \
@@ -50,7 +50,7 @@ echo  "Authorizes the cluster to be reached by some VM in the VPC (this will be 
     --region=$REGION
     
     
-echo "Defines an IP address range for Filestore's VPC peering."    
+echo "Definindo ip pra vpc."    
 gcloud compute addresses create moodle-managed-range \
   --global \
   --purpose=VPC_PEERING \
@@ -59,13 +59,13 @@ gcloud compute addresses create moodle-managed-range \
   --description="Moodle Managed Services" \
   --network=$VPC_NAME
 
-echo "Attaches the range to the service networking API."  
+echo "Conectando o ip."  
 gcloud services vpc-peerings connect \
   --service=servicenetworking.googleapis.com \
   --ranges=moodle-managed-range \
   --network=$VPC_NAME
  
- echo "Defines an IP address range for VPC peering for filestore."
+ echo "Define o ip para o filestore."
  gcloud compute addresses create moodle-managed-range-filestore \
   --global \
   --purpose=VPC_PEERING \
@@ -74,7 +74,7 @@ gcloud services vpc-peerings connect \
   --description="Moodle Managed Services" \
   --network=$VPC_NAME
  
-echo "Updates the peering connection adding both SQL and Filestore ranges.  "
+echo "Atualiza a conexão do range do filestore e do sql.  "
  gcloud services vpc-peerings update \
   --service=servicenetworking.googleapis.com \
   --ranges=moodle-managed-range,moodle-managed-range-filestore \
