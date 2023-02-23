@@ -3,7 +3,7 @@
 #########################################################
 source ./deploy/moodle-on-gcp/0-infra/envs.sh
 
-echo "Creates a Filestore service for NFS support."
+echo "Cria a Filestore service for NFS support."
 
 gcloud filestore instances create $FILESTORE_NAME \
   --description="NFS to support Moodle data." \
