@@ -2,13 +2,14 @@
 # Deploying Moodle With Helm
 #########################################################
 source ./deploy/moodle-on-gcp/0-infra/envs.sh
-
-echo "Opening file..."
+echo "----------------------------------------"
+echo "Preencha o arquivo dos valores do moodle"
+echo "----------------------------------------"
 sleep 5s
 
-vim ./deploy/moodle-on-gcp/5-helm/moodle-values.yaml
+nano ./deploy/moodle-on-gcp/5-helm/moodle-values.yaml
 
-echo "Deploying Moodle..."
+echo "Implantando o Moodle..."
 ./deploy/moodle-on-gcp/5-helm/moodle-helm-install.sh
 
 

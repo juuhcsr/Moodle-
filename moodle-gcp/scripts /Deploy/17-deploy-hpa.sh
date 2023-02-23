@@ -8,7 +8,7 @@ gcloud container clusters get-credentials $GKE_NAME \
     --region $REGION \
     --project $PROJECT_ID
     
-kubectl apply -f /deploy/moodle-on-gcp/9-hpa/moodle-hpa.yaml  
+kubectl apply -f ./deploy/moodle-on-gcp/9-hpa/moodle-hpa.yaml  
 
 echo "Press CTRL+C to exit..."
 echo "Make sure the HPA configuration was successfully applied."
