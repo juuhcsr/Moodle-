@@ -41,4 +41,4 @@ gcloud container clusters get-credentials $GKE_NAME \
   --region $REGION \
   --project $PROJECT_ID
 
-gcloud compute --project=gcp-moodle firewall-rules create moodle-allow-tcp --direction=INGRESS --priority=997 --network=moodle-network --action=ALLOW --rules=tcp:22 --source-ranges=0.0.0.0/0
+

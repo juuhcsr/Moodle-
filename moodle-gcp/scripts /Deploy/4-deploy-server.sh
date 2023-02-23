@@ -6,7 +6,7 @@ source ./deploy/moodle-on-gcp/0-infra/envs.sh
 gcloud compute instances create deploy-1  \
     --image-family=debian-11\
      --image-project=debian-cloud \
-    --project=moodle-gcp2 \
+    --project=$PROJECT_ID \
     --machine-type=e2-medium \
     --network-interface=network-tier=STANDARD,subnet=$SUBNET_NAME \
     --zone=$ZONE \
@@ -49,3 +49,4 @@ CORAÇÃO
 
 
  '
+gcloud compute --project=$PROJECT_ID firewall-rules create moodle-allow-tcp --direction=INGRESS --priority=997 --network=$VPC_NAME --action=ALLOW --rules=tcp:22 --source-ranges=0.0.0.0/0
