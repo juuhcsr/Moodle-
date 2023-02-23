@@ -19,7 +19,7 @@ ColorBlue(){
 }
 menu(){
 echo "#########################################################"
-echo "#            Menu de instlação do moodle        -        #"
+echo "#    Menu de instlação do moodle shell script           #"
 echo "#########################################################"
 echo -ne "
 Menu do moodle no gcp escolha a opção 
@@ -32,17 +32,6 @@ $(ColorGreen '6)') Implantar cluster GKE-Kubernetes.
 $(ColorGreen '7)') Implantar Cloud SQL - Mysql.
 $(ColorGreen '8)') Implantar FILESTORE - NFS.
 $(ColorGreen '9)') Implantar Artifact Registry e imagem Moodle.
-$(ColorGreen '10)') Implantar NameSpace NS.
-$(ColorGreen '11)') Implantar PV.
-$(ColorGreen '12)') Implantar PVC.
-$(ColorGreen '13)') Implantar Moodle com Helm.
-$(ColorGreen '14)') Implantar configuração de backend.
-$(ColorGreen '15)') Implantar Ingress - Balanceador de carga em nuvem.
-$(ColorGreen '16)') Prover um novo certificado gerenciado pelo Google Cloud.
-$(ColorGreen '17)') Habilitar escala horizontal para Pods.
-$(ColorGreen '18)') Configurar Redis.
-$(ColorGreen '20)') Estou com pressa (faz tudo de uma vez, garanta que as variáveis foram preenchidas)
-$(ColorGreen '21)') Verificar instalação
 $(ColorGreen '0)') Sair
 $(ColorBlue 'Escolha uma opção:') "
 
@@ -57,18 +46,6 @@ $(ColorBlue 'Escolha uma opção:') "
 			7) ./Deploy/7-cloud-sql.sh ; menu ;;
 			8) ./Deploy/8-filestore-nfs.sh ; menu ;;
 			9) ./Deploy/9-artifact-registry.sh ; menu ;;
-			10) ./Deploy/10-deploy-ns.sh ; menu ;;
-			11) ./Deploy/11-deploy-pv.sh ; menu ;;
-			12) ./Deploy/12-deploy-pvc.sh ; menu ;;
-			13) ./Deploy/13-deploy-moodle-helm.sh ; menu ;;
-			14) ./Deploy/14-deploy-backend.sh ; menu ;;
-			15) ./Deploy/15-deploy-cloud-lb.sh ; menu ;;
-			16) ./Deploy/16-deploy-ssl-redirect.sh ; menu ;;
-			17) ./Deploy/17-deploy-hpa.sh ; menu ;;
-			18) ./Deploy/18-redis.sh ; menu ;;
-			#19) ./Deploy/ ; menu ;;
-			20) ./Deploy/hurry_up.sh ; menu ;;
-			21) ./Deploy/teste.sh ; menu ;;
 		0) exit 0 ;;
 		*) echo -e $red"Wrong option."$clear; WrongCommand;;
         esac
