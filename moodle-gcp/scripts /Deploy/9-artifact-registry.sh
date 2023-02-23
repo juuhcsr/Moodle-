@@ -1,12 +1,12 @@
 #########################################################
 # Artifact Registry and Moodle Image
 #########################################################
-source ./deploy/moodle-on-gcp/0-infra/envs.sh
+x1
 
-#echo "Creates an Artifact Registry repo for building Moodle images"
-#gcloud artifacts repositories create moodle-filestore \
-#  --location=$REGION \
-#  --repository-format=docker
+echo "Cria o repositório do artifact registry"
+gcloud artifacts repositories create moodle-filestore \
+  --location=$REGION \
+  --repository-format=docker
  
 
 echo "Criando o arquivo cloud build"
@@ -31,4 +31,4 @@ echo "executando o arquivo"
 
 cd ./deploy/moodle-on-gcp/4-moodle-image-builder/
 
-gcloud builds submit --region $REGIO
+gcloud builds submit --region $REGION
