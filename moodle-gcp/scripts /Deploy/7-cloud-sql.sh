@@ -2,8 +2,9 @@
 # CLOUD SQL - MYSQL MANAGED
 #########################################################
 source ./deploy/moodle-on-gcp/0-infra/envs.sh
-
+echo "-----------------------------------"
 echo "Criando a instância gerenciada sql."
+echo "-----------------------------------"
 gcloud sql instances create $MYSQL_INSTANCE_NAME \
   --database-version=MYSQL_8_0 \
   --cpu 1 \
@@ -25,9 +26,9 @@ gcloud sql instances create $MYSQL_INSTANCE_NAME \
   --database-flags=character_set_server=utf8,default_time_zone=-03:00 \
   --root-password=$MYSQL_ROOT_PASSWORD
   
-  
-  echo "Criando o database do moodle."
-  
+echo "-----------------------------"  
+echo "Criando o database do moodle."
+echo "-----------------------------"
   gcloud sql databases create $MYSQL_DB \
   --instance $MYSQL_INSTANCE_NAME \
   --charset $MYSQL_MOODLE_DB_CHARSET \

@@ -2,8 +2,9 @@
 # GKE - KUBERNETS
 #########################################################
 source ./deploy/moodle-on-gcp/0-infra/envs.sh
-
+echo "-----------------------------"
 echo "Criando o cluster kubernetes."
+echo "-----------------------------"
 gcloud container clusters create $GKE_NAME \
   --release-channel=stable \
   --region=$REGION \
@@ -30,8 +31,9 @@ gcloud container clusters create $GKE_NAME \
   --cluster-secondary-range-name=pod-range-gke-1 \
   --services-secondary-range-name=svc-range-gke-1
   
-  
-  echo "Autoriza o cluster a conectar nas instâncias."
+  echo "------------------------------------------------"
+  echo "Autorizando o cluster a conectar nas instâncias."
+  echo "------------------------------------------------"
   gcloud container clusters update $GKE_NAME \
   --enable-master-authorized-networks \
   --master-authorized-networks $MASTER_AUTHORIZED_NETWORKS \

@@ -2,9 +2,9 @@
 # FILESTORE - NFS 2.5Tb
 #########################################################
 source ./deploy/moodle-on-gcp/0-infra/envs.sh
-
-echo "Cria a Filestore service for NFS support."
-
+echo "--------------------------------"
+echo "Criando o Serviço do Filestore ."
+echo "--------------------------------"
 gcloud filestore instances create $FILESTORE_NAME \
   --description="NFS to support Moodle data." \
   --tier=BASIC_SSD \

@@ -2,8 +2,9 @@
 # PERMISSOES
 #########################################################
 source ./deploy/moodle-on-gcp/0-infra/envs.sh
-
+echo "------------------------------------------"
 echo "Garantindo permissões pra conta de serviço"
+echo "------------------------------------------"
   gcloud projects add-iam-policy-binding $PROJECT_ID \
   --member serviceAccount:$NODE_SA_EMAIL \
   --role roles/monitoring.metricWriter

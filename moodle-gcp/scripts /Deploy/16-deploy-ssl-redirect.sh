@@ -11,8 +11,15 @@ echo "abrindo o arquivo"
 sleep 1s
 
 nano ./deploy/moodle-on-gcp/7-ssl-certificate-and-redirect/google-managed-ssl-certificate.yaml 
+echo "-------------------------------"
+echo "Aplicando configurações do ssl."
+echo "-------------------------------"
 
 kubectl apply -f ./deploy/moodle-on-gcp/7-ssl-certificate-and-redirect/google-managed-ssl-certificate.yaml
+echo "------------------------------------"
+echo "Aplicando configurações do frontend."
+echo "------------------------------------"
+
 kubectl apply -f ./deploy/moodle-on-gcp/7-ssl-certificate-and-redirect/frontendconfig-redirect-http-to-https.yaml
 
 
